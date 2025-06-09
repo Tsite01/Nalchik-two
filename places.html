@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Места для посещения - Нальчик</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Нальчик</h2>
+                    <span>Жемчужина Кавказа</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">О Нальчике</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="attractions.html">Достопримечательности</a></li>
+                            <li><a href="history.html">История города</a></li>
+                            <li><a href="accommodation.html">Жилье</a></li>
+                            <li><a href="places.html">Места для посещения</a></li>
+                            <li><a href="cuisine.html">Местная кухня</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">Маршруты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Фотоальбом</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="places-hero">
+            <div class="places-hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Места для посещения</h1>
+                <p class="hero-subtitle">Откройте для себя лучшие локации Нальчика</p>
+                <p class="hero-description">От природных чудес до культурных сокровищ - найдите идеальное место для вашего отдыха</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="places-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th-large"></i>
+                        <span>Все места</span>
+                    </button>
+                    <button class="filter-btn" data-filter="nature">
+                        <i class="fas fa-tree"></i>
+                        <span>Природа</span>
+                    </button>
+                    <button class="filter-btn" data-filter="culture">
+                        <i class="fas fa-building"></i>
+                        <span>Культура</span>
+                    </button>
+                    <button class="filter-btn" data-filter="adventure">
+                        <i class="fas fa-mountain"></i>
+                        <span>Активный отдых</span>
+                    </button>
+                    <button class="filter-btn" data-filter="relaxation">
+                        <i class="fas fa-spa"></i>
+                        <span>Релаксация</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Places Section -->
+        <section class="places-section">
+            <div class="container">
+                <div class="places-grid">
+                    <div class="place-card" data-category="nature">
+                        <div class="place-image" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="place-badge nature">
+                                <i class="fas fa-leaf"></i>
+                                Природа
+                            </div>
+                            <div class="place-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-value">4.9</span>
+                            </div>
+                        </div>
+                        <div class="place-content">
+                            <div class="place-header">
+                                <h3>Курортное озеро</h3>
+                                <div class="place-type">
+                                    <i class="fas fa-water"></i>
+                                    Водоем
+                                </div>
+                            </div>
+                            <div class="place-meta">
+                                <span class="place-time">
+                                    <i class="far fa-clock"></i>
+                                    Круглосуточно
+                                </span>
+                                <span class="place-season">
+                                    <i class="fas fa-calendar"></i>
+                                    Круглый год
+                                </span>
+                            </div>
+                            <p>Искусственное озеро в центре города, окруженное парковой зоной. Идеальное место для прогулок, катания на лодках и отдыха всей семьей.</p>
+                            <div class="place-features">
+                                <span class="feature">Лодки</span>
+                                <span class="feature">Кафе</span>
+                                <span class="feature">Аттракционы</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="place-card" data-category="adventure">
+                        <div class="place-image" style="background-image: url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="place-badge adventure">
+                                <i class="fas fa-mountain"></i>
+                                Активный отдых
+                            </div>
+                            <div class="place-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-value">4.8</span>
+                            </div>
+                        </div>
+                        <div class="place-content">
+                            <div class="place-header">
+                                <h3>Канатная дорога</h3>
+                                <div class="place-type">
+                                    <i class="fas fa-cable-car"></i>
+                                    Транспорт
+                                </div>
+                            </div>
+                            <div class="place-meta">
+                                <span class="place-time">
+                                    <i class="far fa-clock"></i>
+                                    09:00 - 18:00
+                                </span>
+                                <span class="place-season">
+                                    <i class="fas fa-calendar"></i>
+                                    Апрель - Октябрь
+                                </span>
+                            </div>
+                            <p>Современная канатная дорога ведет на смотровую площадку с панорамным видом на город и окрестности.</p>
+                            <div class="place-features">
+                                <span class="feature">Панорама</span>
+                                <span class="feature">Фотозона</span>
+                                <span class="feature">Кафе наверху</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="place-card" data-category="nature">
+                        <div class="place-image" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="place-badge nature">
+                                <i class="fas fa-leaf"></i>
+                                Природа
+                            </div>
+                            <div class="place-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.7</span>
+                            </div>
+                        </div>
+                        <div class="place-content">
+                            <div class="place-header">
+                                <h3>Источник Джылы-Су</h3>
+                                <div class="place-type">
+                                    <i class="fas fa-hot-tub"></i>
+                                    Термальный источник
+                                </div>
+                            </div>
+                            <div class="place-meta">
+                                <span class="place-time">
+                                    <i class="far fa-clock"></i>
+                                    Круглосуточно
+                                </span>
+                                <span class="place-season">
+                                    <i class="fas fa-calendar"></i>
+                                    Май - Сентябрь
+                                </span>
+                            </div>
+                            <p>Уникальные горячие источники у подножия Эльбруса с лечебными свойствами. Место паломничества туристов со всего мира.</p>
+                            <div class="place-features">
+                                <span class="feature">Лечебные воды</span>
+                                <span class="feature">Походы</span>
+                                <span class="feature">Кемпинг</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="place-card" data-category="culture">
+                        <div class="place-image" style="background-image: url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="place-badge culture">
+                                <i class="fas fa-palette"></i>
+                                Культура
+                            </div>
+                            <div class="place-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="rating-value">4.5</span>
+                            </div>
+                        </div>
+                        <div class="place-content">
+                            <div class="place-header">
+                                <h3>Музей изобразительных искусств</h3>
+                                <div class="place-type">
+                                    <i class="fas fa-museum"></i>
+                                    Музей
+                                </div>
+                            </div>
+                            <div class="place-meta">
+                                <span class="place-time">
+                                    <i class="far fa-clock"></i>
+                                    10:00 - 18:00
+                                </span>
+                                <span class="place-season">
+                                    <i class="fas fa-calendar"></i>
+                                    Круглый год
+                                </span>
+                            </div>
+                            <p>Богатая коллекция произведений искусства, включая работы местных художников и мастеров декоративно-прикладного искусства.</p>
+                            <div class="place-features">
+                                <span class="feature">Выставки</span>
+                                <span class="feature">Мастер-классы</span>
+                                <span class="feature">Экскурсии</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="place-card" data-category="adventure">
+                        <div class="place-image" style="background-image: url('https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="place-badge adventure">
+                                <i class="fas fa-horse"></i>
+                                Активный отдых
+                            </div>
+                            <div class="place-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-value">4.9</span>
+                            </div>
+                        </div>
+                        <div class="place-content">
+                            <div class="place-header">
+                                <h3>Ипподром</h3>
+                                <div class="place-type">
+                                    <i class="fas fa-horse-head"></i>
+                                    Конный спорт
+                                </div>
+                            </div>
+                            <div class="place-meta">
+                                <span class="place-time">
+                                    <i class="far fa-clock"></i>
+                                    08:00 - 20:00
+                                </span>
+                                <span class="place-season">
+                                    <i class="fas fa-calendar"></i>
+                                    Май - Октябрь
+                                </span>
+                            </div>
+                            <p>Один из крупнейших ипподромов на Северном Кавказе. Регулярные скачки, конные шоу и обучение верховой езде.</p>
+                            <div class="place-features">
+                                <span class="feature">Скачки</span>
+                                <span class="feature">Обучение</span>
+                                <span class="feature">Конные шоу</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="place-card" data-category="relaxation">
+                        <div class="place-image" style="background-image: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="place-badge relaxation">
+                                <i class="fas fa-skiing"></i>
+                                Релаксация
+                            </div>
+                            <div class="place-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.6</span>
+                            </div>
+                        </div>
+                        <div class="place-content">
+                            <div class="place-header">
+                                <h3>Горнолыжные курорты</h3>
+                                <div class="place-type">
+                                    <i class="fas fa-snowflake"></i>
+                                    Зимний спорт
+                                </div>
+                            </div>
+                            <div class="place-meta">
+                                <span class="place-time">
+                                    <i class="far fa-clock"></i>
+                                    08:30 - 17:00
+                                </span>
+                                <span class="place-season">
+                                    <i class="fas fa-calendar"></i>
+                                    Декабрь - Март
+                                </span>
+                            </div>
+                            <p>Современные горнолыжные комплексы в окрестностях города с трассами различной сложности.</p>
+                            <div class="place-features">
+                                <span class="feature">Прокат</span>
+                                <span class="feature">Инструкторы</span>
+                                <span class="feature">Подъемники</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="recommendations-section">
+            <div class="container">
+                <h2 class="section-title">Рекомендации для посещения</h2>
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h3>Лучшее время</h3>
+                        <p>Май-октябрь идеально подходят для посещения большинства природных достопримечательностей</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Фотографии</h3>
+                        <p>Золотой час на канатной дороге и рассвет у Курортного озера создают невероятные кадры</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Маршруты</h3>
+                        <p>Планируйте 2-3 места в день для комфортного осмотра достопримечательностей</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Нальчик</h3>
+                    <p>Столица Кабардино-Балкарской Республики</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="attractions.html">Достопримечательности</a></li>
+                        <li><a href="accommodation.html">Жилье</a></li>
+                        <li><a href="cuisine.html">Кухня</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Телефон: +7 (866) 2XX-XX-XX</p>
+                    <p>Email: info@nalchik-tourism.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Туристический портал Нальчика. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="scroll-to-top.js"></script>
+    <script src="places.js"></script>
+</body>
+</html>

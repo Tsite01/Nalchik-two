@@ -1,0 +1,534 @@
+
+/* Modern Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(45, 90, 61, 0.9);
+    backdrop-filter: blur(8px);
+    animation: modalFadeIn 0.4s ease-out;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fbf8 100%);
+    margin: auto;
+    padding: 0;
+    border-radius: 24px;
+    max-width: 900px; /* Увеличено с 700px до 900px */
+    width: 98%; /* Увеличено с 95% до 98% */
+    max-height: 90vh; /* Увеличено с 85vh до 90vh */
+    overflow: hidden;
+    box-shadow: 
+        0 25px 80px rgba(45, 90, 61, 0.4),
+        0 0 0 1px rgba(111, 163, 91, 0.1);
+    position: relative;
+    animation: modalSlideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #2d5a3d 0%, #4a7c59 50%, #6fa35b 100%);
+    color: white;
+    padding: 3rem 2.5rem 2.5rem; /* Увеличены отступы */
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></linearGradient></defs><rect width="100" height="20" fill="url(%23shine)"/></svg>') repeat;
+    opacity: 0.3;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 2.4rem; /* Увеличено с 2rem до 2.4rem */
+    font-weight: 700;
+    padding-right: 3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: rotate(90deg) scale(1.1);
+    color: white;
+}
+
+.modal-body {
+    padding: 3rem; /* Увеличено с 2.5rem до 3rem */
+    max-height: calc(90vh - 160px); /* Обновлено в соответствии с новой высотой */
+    overflow-y: auto;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #6fa35b;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #4a7c59;
+}
+
+.modal-image {
+    width: 100%;
+    height: 350px; /* Увеличено с 300px до 350px */
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 2.5rem; /* Увеличено с 2rem до 2.5rem */
+    box-shadow: 0 10px 30px rgba(45, 90, 61, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.modal-image:hover {
+    transform: scale(1.02);
+}
+
+.modal-description {
+    color: #2d5a3d;
+    line-height: 1.8;
+    font-size: 1.2rem; /* Увеличено с 1.1rem до 1.2rem */
+    margin-bottom: 2.5rem; /* Увеличено с 2rem до 2.5rem */
+    text-align: justify;
+    position: relative;
+}
+
+.modal-description::first-letter {
+    font-size: 1.6em; /* Увеличено с 1.5em до 1.6em */
+    font-weight: bold;
+    color: #4a7c59;
+    float: left;
+    line-height: 1;
+    margin: 0.1em 0.1em 0 0;
+}
+
+.modal-details {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fbf8 100%);
+    padding: 2.5rem; /* Увеличено с 2rem до 2.5rem */
+    border-radius: 20px;
+    border: 2px solid #8fb896;
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        0 8px 25px rgba(45, 90, 61, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2d5a3d, #4a7c59, #6fa35b, #8fb896);
+}
+
+.modal-details h3 {
+    color: #2d5a3d;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem; /* Увеличено с 1.4rem до 1.6rem */
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modal-details h3::before {
+    content: '📍';
+    font-size: 1.2em;
+}
+
+.modal-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.2rem; /* Увеличено с 1rem до 1.2rem */
+}
+
+.modal-details li {
+    padding: 1.2rem 1.8rem; /* Увеличены отступы */
+    color: #4a7c59;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fbf8 100%);
+    border-radius: 12px;
+    border-left: 4px solid #6fa35b;
+    box-shadow: 
+        0 4px 15px rgba(45, 90, 61, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    position: relative;
+    padding-left: 3.5rem; /* Увеличено с 3rem до 3.5rem */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1.05rem; /* Увеличен размер шрифта */
+}
+
+.modal-details li:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 20px rgba(45, 90, 61, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.modal-details li::before {
+    content: '✓';
+    position: absolute;
+    left: 1.2rem; /* Увеличено с 1rem до 1.2rem */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6fa35b;
+    font-weight: bold;
+    font-size: 1.3rem; /* Увеличено с 1.2rem до 1.3rem */
+    background: white;
+    border-radius: 50%;
+    width: 26px; /* Увеличено с 24px до 26px */
+    height: 26px; /* Увеличено с 24px до 26px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(111, 163, 91, 0.3);
+}
+
+.modal-actions {
+    margin-top: 2.5rem; /* Увеличено с 2rem до 2.5rem */
+    display: flex;
+    gap: 1.2rem; /* Увеличено с 1rem до 1.2rem */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem; /* Увеличено с 1.5rem до 2rem */
+    border-top: 2px solid #8fb896;
+}
+
+.modal-btn {
+    padding: 1rem 2.5rem; /* Увеличены отступы */
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem; /* Увеличено с 0.95rem до 1rem */
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.modal-btn-primary {
+    background: linear-gradient(135deg, #4a7c59 0%, #6fa35b 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(74, 124, 89, 0.4);
+}
+
+.modal-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 124, 89, 0.5);
+    background: linear-gradient(135deg, #3a6b49 0%, #5f934b 100%);
+}
+
+.modal-btn-secondary {
+    background: transparent;
+    color: #4a7c59;
+    border: 2px solid #6fa35b;
+}
+
+.modal-btn-secondary:hover {
+    background: #6fa35b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.modal-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #4a7c59;
+}
+
+.modal-stars {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Loading state */
+.modal-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.modal-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #8fb896;
+    border-top: 4px solid #4a7c59;
+    border-radius: 50%;
+    animation: modalSpin 1s linear infinite;
+}
+
+@keyframes modalSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive modal */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 98%;
+        max-height: 95vh;
+        border-radius: 20px;
+    }
+    
+    .modal-header {
+        padding: 2.5rem 2rem 2rem; /* Увеличены отступы для мобильных */
+    }
+    
+    .modal-header h2 {
+        font-size: 1.8rem; /* Увеличено с 1.6rem до 1.8rem */
+        padding-right: 2.5rem;
+    }
+    
+    .modal-close {
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .modal-body {
+        padding: 2rem; /* Увеличено с 1.5rem до 2rem */
+        max-height: calc(95vh - 140px);
+    }
+    
+    .modal-image {
+        height: 250px; /* Увеличено с 220px до 250px */
+        margin-bottom: 2rem; /* Увеличено с 1.5rem до 2rem */
+    }
+    
+    .modal-description {
+        font-size: 1.1rem; /* Увеличено с 1rem до 1.1rem */
+        margin-bottom: 2rem; /* Увеличено с 1.5rem до 2rem */
+    }
+    
+    .modal-details {
+        padding: 2rem; /* Увеличено с 1.5rem до 2rem */
+    }
+    
+    .modal-details li {
+        padding: 1rem 1.2rem 1rem 3rem; /* Увеличены отступы */
+        font-size: 1rem; /* Увеличено с 0.9rem до 1rem */
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .modal-btn {
+        justify-content: center;
+        padding: 1.2rem; /* Увеличено с 1rem до 1.2rem */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal {
+        padding: 10px;
+    }
+    
+    .modal-content {
+        width: 100%;
+        border-radius: 16px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.6rem; /* Увеличено с 1.4rem до 1.6rem */
+    }
+    
+    .modal-body {
+        padding: 1.5rem; /* Увеличено с 1rem до 1.5rem */
+    }
+    
+    .modal-image {
+        height: 200px; /* Увеличено с 180px до 200px */
+        border-radius: 16px;
+    }
+    
+    .modal-details ul {
+        gap: 1rem; /* Увеличено с 0.8rem до 1rem */
+    }
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #6fa35b;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #4a7c59;
+}
+
+.modal-btn-primary {
+    background: linear-gradient(135deg, #4a7c59 0%, #6fa35b 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(74, 124, 89, 0.4);
+}
+
+.modal-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 124, 89, 0.5);
+    background: linear-gradient(135deg, #3a6b49 0%, #5f934b 100%);
+}
+
+.modal-btn-secondary {
+    background: transparent;
+    color: #4a7c59;
+    border: 2px solid #6fa35b;
+}
+
+.modal-btn-secondary:hover {
+    background: #6fa35b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.modal-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #4a7c59;
+}
+
+.modal-stars {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Loading state */
+.modal-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.modal-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #8fb896;
+    border-top: 4px solid #4a7c59;
+    border-radius: 50%;
+    animation: modalSpin 1s linear infinite;
+}
+
+@keyframes modalSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

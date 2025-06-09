@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Достопримечательности - Нальчик</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal-enhanced.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2d5a3d">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Нальчик</h2>
+                    <span>Жемчужина Кавказа</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">О Нальчике</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="attractions.html">Достопримечательности</a></li>
+                            <li><a href="history.html">История города</a></li>
+                            <li><a href="accommodation.html">Жилье</a></li>
+                            <li><a href="places.html">Места для посещения</a></li>
+                            <li><a href="cuisine.html">Местная кухня</a></li>
+                            <li><a href="routes.html">Маршруты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">Маршруты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Фотоальбом</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Достопримечательности Нальчика</h1>
+                <p class="hero-subtitle">Откройте красоту и историю города</p>
+                <div class="filters-section">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Поиск достопримечательностей...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">Все</button>
+                        <button class="filter-btn" data-category="nature">Природа</button>
+                        <button class="filter-btn" data-category="culture">Культура</button>
+                        <button class="filter-btn" data-category="history">История</button>
+                        <button class="filter-btn" data-category="recreation">Отдых</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="content-grid" id="attractions-grid">
+                    <div class="content-card" data-category="nature" data-attraction="elbrus">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.9 (1,245)</span>
+                            </div>
+                            <h3>Гора Эльбрус</h3>
+                            <p>Высочайшая вершина России и Европы, расположенная в часе езды от Нальчика. Популярное место для альпинизма и горнолыжного спорта.</p>
+                            <div class="card-info">
+                                <span class="distance">120 км</span>
+                                <span class="duration">2.5 часа</span>
+                            </div>
+                            <button class="details-btn" onclick="openModal('elbrus')">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-category="nature" data-attraction="blue-lakes">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.8 (892)</span>
+                            </div>
+                            <h3>Голубые озера</h3>
+                            <p>Уникальные карстовые озера с кристально чистой водой. Нижнее Голубое озеро не замерзает даже зимой благодаря подземным источникам.</p>
+                            <div class="card-info">
+                                <span class="distance">60 км</span>
+                                <span class="duration">1.5 часа</span>
+                            </div>
+                            <button class="details-btn" onclick="openModal('blue-lakes')">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-category="nature" data-attraction="national-park">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.7 (567)</span>
+                            </div>
+                            <h3>Национальный парк</h3>
+                            <p>Приэльбрусский национальный парк с уникальной флорой и фауной, минеральными источниками и живописными горными тропами.</p>
+                            <div class="card-info">
+                                <span class="distance">100 км</span>
+                                <span class="duration">2 часа</span>
+                            </div>
+                            <button class="details-btn" onclick="openModal('national-park')">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-category="culture" data-attraction="atazhukinsky-garden">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.6 (734)</span>
+                            </div>
+                            <h3>Атажукинский сад</h3>
+                            <p>Один из крупнейших парков на Северном Кавказе, основанный в 1847 году. Здесь растет более 150 видов деревьев и кустарников.</p>
+                            <div class="card-info">
+                                <span class="distance">В городе</span>
+                                <span class="duration">30 мин</span>
+                            </div>
+                            <button class="details-btn" onclick="openModal('atazhukinsky-garden')">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-category="nature" data-attraction="chegem-waterfalls">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.8 (923)</span>
+                            </div>
+                            <h3>Чегемские водопады</h3>
+                            <p>Каскад живописных водопадов в Чегемском ущелье, особенно красивых зимой, когда они частично замерзают, образуя ледяные колонны.</p>
+                            <div class="card-info">
+                                <span class="distance">45 км</span>
+                                <span class="duration">1 час</span>
+                            </div>
+                            <button class="details-btn" onclick="openModal('chegem-waterfalls')">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-category="nature" data-attraction="narzan-valley">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.5 (456)</span>
+                            </div>
+                            <h3>Долина Нарзанов</h3>
+                            <p>Место выхода на поверхность многочисленных минеральных источников с целебной водой, окруженное величественными горными пейзажами.</p>
+                            <div class="card-info">
+                                <span class="distance">100 км</span>
+                                <span class="duration">2.5 часа</span>
+                            </div>
+                            <button class="details-btn" onclick="openModal('narzan-valley')">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-category="recreation" data-attraction="thermal-springs">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.9 (678)</span>
+                            </div>
+                            <h3>Термальные источники Аушигер</h3>
+                            <p>Уникальные горячие термальные источники с температурой воды +50°C. Круглогодичное купание и spa-процедуры в окружении гор.</p>
+                            <div class="card-info">
+                                <span class="distance">85 км</span>
+                                <span class="duration">2 часа</span>
+                            </div>
+                            <button class="details-btn" onclick="openModal('thermal-springs')">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-category="culture" data-attraction="chateau-erken">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.7 (312)</span>
+                            </div>
+                            <h3>Замок Шато Эркен</h3>
+                            <p>Современный винодельческий комплекс в средневековом стиле. Дегустация местных вин, экскурсии по винодельне и изысканный ресторан.</p>
+                            <div class="card-info">
+                                <span class="distance">25 км</span>
+                                <span class="duration">45 мин</span>
+                            </div>
+                            <button class="details-btn" onclick="openModal('chateau-erken')">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="content-card" data-category="history" data-attraction="national-museum">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.6 (445)</span>
+                            </div>
+                            <h3>Национальный музей КБР</h3>
+                            <p>Богатейшая коллекция истории, культуры и природы Кабардино-Балкарии. Археологические находки и интерактивные выставки.</p>
+                            <div class="card-info">
+                                <span class="distance">В городе</span>
+                                <span class="duration">20 мин</span>
+                            </div>
+                            <button class="details-btn" onclick="openModal('national-museum')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Нальчик</h3>
+                    <p>Столица Кабардино-Балкарской Республики</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="attractions.html">Достопримечательности</a></li>
+                        <li><a href="accommodation.html">Жилье</a></li>
+                        <li><a href="cuisine.html">Кухня</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Телефон: +7 (866) 2XX-XX-XX</p>
+                    <p>Email: info@nalchik-tourism.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Туристический портал Нальчика. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="scroll-to-top.js"></script>
+    <script src="modal-enhanced.js"></script>
+    <script src="attractions-filter.js"></script>
+</body>
+</html>

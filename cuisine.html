@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Местная кухня - Нальчик</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Нальчик</h2>
+                    <span>Жемчужина Кавказа</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">О Нальчике</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="attractions.html">Достопримечательности</a></li>
+                            <li><a href="history.html">История города</a></li>
+                            <li><a href="accommodation.html">Жилье</a></li>
+                            <li><a href="places.html">Места для посещения</a></li>
+                            <li><a href="cuisine.html">Местная кухня</a></li>
+                            <li><a href="routes.html">Маршруты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">Маршруты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Фотоальбом</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="cuisine-hero">
+            <div class="cuisine-hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Кавказская кухня</h1>
+                <p class="hero-subtitle">Вкусы традиций гор</p>
+                <p class="hero-description">Откройте для себя богатство вкусов Кабардино-Балкарии и узнайте, где можно попробовать аутентичные блюда</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="cuisine-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Все блюда</button>
+                    <button class="filter-btn" data-filter="main">Основные блюда</button>
+                    <button class="filter-btn" data-filter="appetizer">Закуски</button>
+                    <button class="filter-btn" data-filter="dessert">Десерты</button>
+                    <button class="filter-btn" data-filter="drink">Напитки</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dishes Section -->
+        <section class="dishes-section">
+            <div class="container">
+                <h2 class="section-title">Традиционные блюда</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-category="main">
+                        <div class="dish-image" style="background-image: url('https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400&h=300&fit=crop')"></div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Шашлык</h3>
+                                <div class="dish-price">от 450₽</div>
+                            </div>
+                            <div class="dish-meta">
+                                <span class="cook-time"><i class="fas fa-clock"></i> 25 мин</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Умеренно</span>
+                            </div>
+                            <p>Традиционный кавказский шашлык из баранины, говядины или курицы, приготовленный на мангале с использованием особых специй и маринадов.</p>
+                            <div class="dish-tags">
+                                <span class="tag">Мясное</span>
+                                <span class="tag">Гриль</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card" data-category="appetizer">
+                        <div class="dish-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop')"></div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Хичины</h3>
+                                <div class="dish-price">от 180₽</div>
+                            </div>
+                            <div class="dish-meta">
+                                <span class="cook-time"><i class="fas fa-clock"></i> 15 мин</span>
+                                <span class="spice-level"><i class="fas fa-leaf"></i> Мягкий</span>
+                            </div>
+                            <p>Национальное балкарское блюдо — тонкие лепешки с начинкой из сыра и зелени. Подаются горячими с маслом и сметаной.</p>
+                            <div class="dish-tags">
+                                <span class="tag">Сыр</span>
+                                <span class="tag">Лепешки</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card" data-category="main">
+                        <div class="dish-image" style="background-image: url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop')"></div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Лягман</h3>
+                                <div class="dish-price">от 320₽</div>
+                            </div>
+                            <div class="dish-meta">
+                                <span class="cook-time"><i class="fas fa-clock"></i> 30 мин</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Средне</span>
+                            </div>
+                            <p>Сытный суп с домашней лапшой, мясом и овощами с особыми кавказскими нотками.</p>
+                            <div class="dish-tags">
+                                <span class="tag">Суп</span>
+                                <span class="tag">Лапша</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card" data-category="main">
+                        <div class="dish-image" style="background-image: url('https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400&h=300&fit=crop')"></div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Джедлибже</h3>
+                                <div class="dish-price">от 380₽</div>
+                            </div>
+                            <div class="dish-meta">
+                                <span class="cook-time"><i class="fas fa-clock"></i> 40 мин</span>
+                                <span class="spice-level"><i class="fas fa-leaf"></i> Мягкий</span>
+                            </div>
+                            <p>Традиционное кабардинское блюдо из курицы в сметанном соусе с чесноком и специями.</p>
+                            <div class="dish-tags">
+                                <span class="tag">Курица</span>
+                                <span class="tag">Сметана</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card" data-category="dessert">
+                        <div class="dish-image" style="background-image: url('https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=400&h=300&fit=crop')"></div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Халва</h3>
+                                <div class="dish-price">от 150₽</div>
+                            </div>
+                            <div class="dish-meta">
+                                <span class="cook-time"><i class="fas fa-clock"></i> 5 мин</span>
+                                <span class="spice-level"><i class="fas fa-heart"></i> Сладкий</span>
+                            </div>
+                            <p>Традиционная восточная сладость из семян подсолнечника или кунжута с медом по старинным рецептам.</p>
+                            <div class="dish-tags">
+                                <span class="tag">Десерт</span>
+                                <span class="tag">Мед</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card" data-category="drink">
+                        <div class="dish-image" style="background-image: url('https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=400&h=300&fit=crop')"></div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Айран</h3>
+                                <div class="dish-price">от 80₽</div>
+                            </div>
+                            <div class="dish-meta">
+                                <span class="cook-time"><i class="fas fa-clock"></i> 2 мин</span>
+                                <span class="spice-level"><i class="fas fa-tint"></i> Освежающий</span>
+                            </div>
+                            <p>Освежающий кисломолочный напиток, идеально подходящий к острым и жирным блюдам кавказской кухни.</p>
+                            <div class="dish-tags">
+                                <span class="tag">Напиток</span>
+                                <span class="tag">Йогурт</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurants Section -->
+        <section class="restaurants-section">
+            <div class="container">
+                <h2 class="section-title">Где попробовать</h2>
+                <p class="section-subtitle">Лучшие рестораны и кафе Нальчика для знакомства с кавказской кухней</p>
+                
+                <div class="restaurants-grid">
+                    <div class="restaurant-card">
+                        <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=250&fit=crop')"></div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-header">
+                                <h3>Шашлычная у Магомеда</h3>
+                                <div class="restaurant-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.8</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span class="cuisine-type"><i class="fas fa-utensils"></i> Кавказская кухня</span>
+                                <span class="price-range"><i class="fas fa-ruble-sign"></i> ₽₽</span>
+                            </div>
+                            <p>Семейное заведение с многолетней традицией приготовления настоящего кавказского шашлыка. Свежее мясо, секретные маринады.</p>
+                            <div class="restaurant-info">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>ул. Кабардинская, 42</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+7 (866) 242-15-67</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>10:00 - 23:00</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-specialties">
+                                <span class="specialty">Шашлык из баранины</span>
+                                <span class="specialty">Люля-кебаб</span>
+                                <span class="specialty">Хачапури</span>
+                            </div>
+                            <button class="restaurant-btn">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=250&fit=crop')"></div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-header">
+                                <h3>Кафе Эльбрус</h3>
+                                <div class="restaurant-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.3</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span class="cuisine-type"><i class="fas fa-utensils"></i> Панорамное кафе</span>
+                                <span class="price-range"><i class="fas fa-ruble-sign"></i> ₽₽₽</span>
+                            </div>
+                            <p>Уютное кафе с панорамными видами на горы. Идеальное место для романтического ужина с традиционными блюдами.</p>
+                            <div class="restaurant-info">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>пр. Ленина, 12</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+7 (866) 242-28-94</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>08:00 - 24:00</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-specialties">
+                                <span class="specialty">Джедлибже</span>
+                                <span class="specialty">Лягман</span>
+                                <span class="specialty">Хычины</span>
+                            </div>
+                            <button class="restaurant-btn">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&h=250&fit=crop')"></div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-header">
+                                <h3>Ресторан Нарт</h3>
+                                <div class="restaurant-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.9</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span class="cuisine-type"><i class="fas fa-utensils"></i> Премиум кухня</span>
+                                <span class="price-range"><i class="fas fa-ruble-sign"></i> ₽₽₽₽</span>
+                            </div>
+                            <p>Элитный ресторан с изысканной подачей традиционных блюд. Авторская интерпретация кавказской кухни от шеф-повара.</p>
+                            <div class="restaurant-info">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>ул. Толстого, 89</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+7 (866) 242-35-21</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>12:00 - 02:00</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-specialties">
+                                <span class="specialty">Авторский шашлык</span>
+                                <span class="specialty">Осетинские пироги</span>
+                                <span class="specialty">Винная карта</span>
+                            </div>
+                            <button class="restaurant-btn">Забронировать</button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=250&fit=crop')"></div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-header">
+                                <h3>Хичин-хаус</h3>
+                                <div class="restaurant-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-text">4.6</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span class="cuisine-type"><i class="fas fa-utensils"></i> Специализация на хичинах</span>
+                                <span class="price-range"><i class="fas fa-ruble-sign"></i> ₽</span>
+                            </div>
+                            <p>Уютное заведение, специализирующееся на приготовлении лучших хичинов в городе. Быстро, вкусно, доступно.</p>
+                            <div class="restaurant-info">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>ул. Пушкина, 15</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+7 (866) 242-19-88</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>09:00 - 22:00</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-specialties">
+                                <span class="specialty">Хичины с сыром</span>
+                                <span class="specialty">Хичины с зеленью</span>
+                                <span class="specialty">Чай горный</span>
+                            </div>
+                            <button class="restaurant-btn">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=250&fit=crop')"></div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-header">
+                                <h3>Чайхана Восток</h3>
+                                <div class="restaurant-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.2</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span class="cuisine-type"><i class="fas fa-utensils"></i> Восточная кухня</span>
+                                <span class="price-range"><i class="fas fa-ruble-sign"></i> ₽₽</span>
+                            </div>
+                            <p>Аутентичная восточная атмосфера с коврами, подушками и кальянами. Большой выбор чая и восточных сладостей.</p>
+                            <div class="restaurant-info">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>ул. Горького, 33</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+7 (866) 242-44-77</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>11:00 - 01:00</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-specialties">
+                                <span class="specialty">Плов</span>
+                                <span class="specialty">Манты</span>
+                                <span class="specialty">Восточные сладости</span>
+                            </div>
+                            <button class="restaurant-btn">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=250&fit=crop')"></div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-header">
+                                <h3>Пиццерия Мама Миа</h3>
+                                <div class="restaurant-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-text">4.1</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span class="cuisine-type"><i class="fas fa-utensils"></i> Итальянская кухня</span>
+                                <span class="price-range"><i class="fas fa-ruble-sign"></i> ₽₽</span>
+                            </div>
+                            <p>Для разнообразия — лучшая пицца в городе и классические итальянские блюда. Семейная атмосфера и детское меню.</p>
+                            <div class="restaurant-info">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>пр. Шогенцукова, 7</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+7 (866) 242-66-99</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>11:00 - 23:00</span>
+                                </div>
+                            </div>
+                            <div class="restaurant-specialties">
+                                <span class="specialty">Пицца на дровах</span>
+                                <span class="specialty">Паста</span>
+                                <span class="specialty">Тирамису</span>
+                            </div>
+                            <button class="restaurant-btn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tips-section">
+            <div class="container">
+                <h2 class="section-title">Полезные советы</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Заказывайте заранее</h3>
+                        <p>Популярные блюда, особенно шашлык, лучше заказывать заранее или приходить пораньше.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Общайтесь с поварами</h3>
+                        <p>Не стесняйтесь просить рекомендации — повара с радостью расскажут о лучших блюдах.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Учитывайте сезонность</h3>
+                        <p>Некоторые блюда готовятся только из сезонных ингредиентов, особенно зелень для хичинов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Нальчик</h3>
+                    <p>Столица Кабардино-Балкарской Республики</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="attractions.html">Достопримечательности</a></li>
+                        <li><a href="accommodation.html">Жилье</a></li>
+                        <li><a href="cuisine.html">Кухня</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Телефон: +7 (866) 2XX-XX-XX</p>
+                    <p>Email: info@nalchik-tourism.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Туристический портал Нальчика. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="scroll-to-top.js"></script>
+    <script src="cuisine.js"></script>
+</body>
+</html>

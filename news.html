@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Нальчик</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="news-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Нальчик</h2>
+                    <span>Жемчужина Кавказа</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">О Нальчике</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="attractions.html">Достопримечательности</a></li>
+                            <li><a href="history.html">История города</a></li>
+                            <li><a href="accommodation.html">Жилье</a></li>
+                            <li><a href="places.html">Места для посещения</a></li>
+                            <li><a href="cuisine.html">Местная кухня</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">Маршруты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link active">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Фотоальбом</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero news-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Новости Нальчика</h1>
+                <p class="hero-subtitle">Актуальные события и новости жемчужины Кавказа</p>
+            </div>
+        </section>
+
+        <section class="news-controls">
+            <div class="container">
+                <div class="news-filters">
+                    <button class="filter-btn active" data-category="all">Все новости</button>
+                    <button class="filter-btn" data-category="tourism">Туризм</button>
+                    <button class="filter-btn" data-category="culture">Культура</button>
+                    <button class="filter-btn" data-category="events">События</button>
+                    <button class="filter-btn" data-category="sport">Спорт</button>
+                </div>
+                <div class="news-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="newsSearch" placeholder="Поиск новостей... (Ctrl+F)">
+                </div>
+            </div>
+        </section>
+
+        <section class="news-content">
+            <div class="container">
+                <div class="news-grid" id="newsGrid">
+                    <article class="news-card featured" data-category="tourism">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Туристический маршрут">
+                            <div class="news-category tourism">Туризм</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">15 ноября 2024</span>
+                                <span class="news-author">Администрация города</span>
+                            </div>
+                            <h3 class="news-title">Открытие нового туристического маршрута в Приэльбрусье</h3>
+                            <p class="news-excerpt">В Нальчике состоялось торжественное открытие нового экологического маршрута, который проходит через самые живописные места Приэльбрусья и включает посещение уникальных природных достопримечательностей...</p>
+                            <div class="news-footer">
+                                <a href="news-tourism-route.html" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card featured" data-category="culture">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Фестиваль кухни">
+                            <div class="news-category culture">Культура</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">10 ноября 2024</span>
+                                <span class="news-author">Культурный центр</span>
+                            </div>
+                            <h3 class="news-title">Фестиваль национальной кухни прошел в центре города</h3>
+                            <p class="news-excerpt">В парке культуры и отдыха состоялся традиционный фестиваль кавказской кухни, где посетители могли попробовать аутентичные блюда балкарской и кабардинской кухни. Более 5000 гостей посетили мероприятие...</p>
+                            <div class="news-footer">
+                                <a href="news-food-festival.html" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="events">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1527576539890-dfa815648363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Центральная площадь">
+                            <div class="news-category events">События</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">5 ноября 2024</span>
+                                <span class="news-author">Мэрия города</span>
+                            </div>
+                            <h3 class="news-title">Реконструкция центральной площади завершена</h3>
+                            <p class="news-excerpt">Завершились работы по благоустройству центральной площади Нальчика. Обновленное пространство включает новые фонтаны, зеленые зоны и современное освещение...</p>
+                            <div class="news-footer">
+                                <a href="#" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="tourism">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Санаторий">
+                            <div class="news-category tourism">Туризм</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">1 ноября 2024</span>
+                                <span class="news-author">Туристическое агентство</span>
+                            </div>
+                            <h3 class="news-title">Новый санаторно-курортный комплекс откроется зимой</h3>
+                            <p class="news-excerpt">На окраине Нальчика началась финальная стадия строительства современного spa-комплекса с термальными источниками и лечебными программами...</p>
+                            <div class="news-footer">
+                                <a href="#" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="events">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Конференция">
+                            <div class="news-category events">События</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">28 октября 2024</span>
+                                <span class="news-author">Министерство туризма</span>
+                            </div>
+                            <h3 class="news-title">Международная конференция по экотуризму</h3>
+                            <p class="news-excerpt">В Нальчике прошла международная конференция, посвященная развитию экологического туризма в горных регионах Кавказа с участием экспертов из 12 стран...</p>
+                            <div class="news-footer">
+                                <a href="#" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="sport">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Горнолыжный курорт">
+                            <div class="news-category sport">Спорт</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">25 октября 2024</span>
+                                <span class="news-author">Горнолыжный комплекс</span>
+                            </div>
+                            <h3 class="news-title">Горнолыжный сезон откроется раньше обычного</h3>
+                            <p class="news-excerpt">Благодаря раннему снегопаду на склонах Эльбруса, горнолыжный сезон в этом году откроется на две недели раньше запланированного срока...</p>
+                            <div class="news-footer">
+                                <a href="#" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="culture">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Музей">
+                            <div class="news-category culture">Культура</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">20 октября 2024</span>
+                                <span class="news-author">Национальный музей</span>
+                            </div>
+                            <h3 class="news-title">Открытие новой экспозиции в краеведческом музее</h3>
+                            <p class="news-excerpt">В Национальном музее КБР открылась уникальная экспозиция "Сокровища Приэльбрусья", представляющая археологические находки и культурное наследие региона...</p>
+                            <div class="news-footer">
+                                <a href="#" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="tourism">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Горы">
+                            <div class="news-category tourism">Туризм</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">15 октября 2024</span>
+                                <span class="news-author">Турагентство "Кавказ-Тур"</span>
+                            </div>
+                            <h3 class="news-title">Новые треккинговые маршруты в национальном парке</h3>
+                            <p class="news-excerpt">Администрация национального парка "Приэльбрусье" анонсировала открытие трех новых пешеходных маршрутов различной сложности для любителей горного туризма...</p>
+                            <div class="news-footer">
+                                <a href="#" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="events">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Концерт">
+                            <div class="news-category events">События</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">10 октября 2024</span>
+                                <span class="news-author">Дворец культуры</span>
+                            </div>
+                            <h3 class="news-title">Фестиваль кавказской музыки соберет звезд региона</h3>
+                            <p class="news-excerpt">В конце октября в Нальчике пройдет ежегодный фестиваль традиционной кавказской музыки с участием известных исполнителей и молодых талантов...</p>
+                            <div class="news-footer">
+                                <a href="#" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="sport">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1551524164-687a55dd1126?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Спорт">
+                            <div class="news-category sport">Спорт</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">5 октября 2024</span>
+                                <span class="news-author">Спорткомитет КБР</span>
+                            </div>
+                            <h3 class="news-title">Чемпионат России по альпинизму пройдет в Приэльбрусье</h3>
+                            <p class="news-excerpt">Нальчик впервые станет местом проведения чемпионата России по альпинизму. Соревнования пройдут на склонах Эльбруса с участием лучших спортсменов страны...</p>
+                            <div class="news-footer">
+                                <a href="#" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="culture">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Театр">
+                            <div class="news-category culture">Культура</div>
+                        </div>
+                        <div class="news-content-text">
+                            <div class="news-meta">
+                                <span class="news-date">1 октября 2024</span>
+                                <span class="news-author">Театр им. Шогенцукова</span>
+                            </div>
+                            <h3 class="news-title">Премьера спектакля о истории Кабардино-Балкарии</h3>
+                            <p class="news-excerpt">Национальный театр представил премьеру нового спектакла "Легенды Кавказа", рассказывающего о богатой истории и традициях народов региона...</p>
+                            <div class="news-footer">
+                                <a href="#" class="read-more-btn">Читать далее</a>
+                                <div class="news-share">
+                                    <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+                                    <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn" id="prevBtn">‹ Предыдущая</button>
+                    <span class="pagination-info">Страница <span id="currentPage">1</span> из <span id="totalPages">1</span></span>
+                    <button class="pagination-btn" id="nextBtn">Следующая ›</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Нальчик</h3>
+                    <p>Столица Кабардино-Балкарской Республики</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="attractions.html">Достопримечательности</a></li>
+                        <li><a href="accommodation.html">Жилье</a></li>
+                        <li><a href="cuisine.html">Кухня</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Телефон: +7 (866) 2XX-XX-XX</p>
+                    <p>Email: info@nalchik-tourism.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Туристический портал Нальчика. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="news.js"></script>
+    <script src="scroll-to-top.js"></script>
+</body>
+</html>

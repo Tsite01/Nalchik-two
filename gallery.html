@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотоальбом - Нальчик</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery-enhanced.css">
+    <link rel="stylesheet" href="modal-enhanced.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Нальчик</h2>
+                    <span>Жемчужина Кавказа</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">О Нальчике</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="attractions.html">Достопримечательности</a></li>
+                            <li><a href="history.html">История города</a></li>
+                            <li><a href="accommodation.html">Жилье</a></li>
+                            <li><a href="places.html">Места для посещения</a></li>
+                            <li><a href="cuisine.html">Местная кухня</a></li>
+                            <li><a href="routes.html">Маршруты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">Маршруты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link active">Фотоальбом</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="gallery-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Фотоальбом Нальчика</h1>
+                <p class="hero-subtitle">Откройте красоту нашего города через объектив</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalPhotos">150+</span>
+                        <span class="stat-label">Фотографий</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Категорий</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4K</span>
+                        <span class="stat-label">Качество</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb">
+            <div class="container">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Фотоальбом</span>
+            </div>
+        </nav>
+
+        <!-- Gallery Controls -->
+        <section class="gallery-controls">
+            <div class="container">
+                <!-- Search Bar -->
+                <div class="search-section">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Поиск фотографий..." autocomplete="off">
+                        <button class="search-clear" id="clearSearch" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="filter-section">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-th"></i>
+                            <span>Все</span>
+                        </button>
+                        <button class="filter-btn" data-filter="nature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Природа</span>
+                        </button>
+                        <button class="filter-btn" data-filter="architecture">
+                            <i class="fas fa-building"></i>
+                            <span>Архитектура</span>
+                        </button>
+                        <button class="filter-btn" data-filter="events">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>События</span>
+                        </button>
+                        <button class="filter-btn" data-filter="panorama">
+                            <i class="fas fa-mountain"></i>
+                            <span>Панорамы</span>
+                        </button>
+                        <button class="filter-btn" data-filter="culture">
+                            <i class="fas fa-theater-masks"></i>
+                            <span>Культура</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- View Options -->
+                <div class="view-options">
+                    <div class="view-buttons">
+                        <button class="view-btn active" data-view="masonry" title="Масонри сетка">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button class="view-btn" data-view="grid" title="Обычная сетка">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list" title="Список">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    <button class="slideshow-btn" id="startSlideshow">
+                        <i class="fas fa-play"></i>
+                        <span>Слайдшоу</span>
+                    </button>
+                </div>
+
+                <!-- Results Info -->
+                <div class="results-info">
+                    <span id="resultsCount">Показано: 24 из 150 фотографий</span>
+                    <div class="sort-options">
+                        <select id="sortSelect">
+                            <option value="date-desc">Сначала новые</option>
+                            <option value="date-asc">Сначала старые</option>
+                            <option value="name-asc">По названию А-Я</option>
+                            <option value="name-desc">По названию Я-А</option>
+                            <option value="popular">По популярности</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Content -->
+        <section class="gallery-content">
+            <div class="container">
+                <!-- Loading Indicator -->
+                <div class="loading-indicator" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>Загрузка фотографий...</p>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Gallery items will be dynamically generated -->
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="load-more-btn" id="loadMoreBtn">
+                        <i class="fas fa-plus"></i>
+                        <span>Показать ещё</span>
+                    </button>
+                </div>
+
+                <!-- No Results -->
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>Ничего не найдено</h3>
+                    <p>Попробуйте изменить параметры поиска или фильтры</p>
+                    <button class="reset-filters-btn" id="resetFilters">Сбросить фильтры</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Favorites Section -->
+        <section class="favorites-section" id="favoritesSection" style="display: none;">
+            <div class="container">
+                <h2>Избранные фотографии</h2>
+                <div class="favorites-grid" id="favoritesGrid">
+                    <!-- Favorite items will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Modal -->
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Заголовок фотографии</h2>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img class="modal-image" id="modalImage" src="" alt="">
+                    <div class="image-navigation">
+                        <button class="nav-btn prev-btn" id="prevImage">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="nav-btn next-btn" id="nextImage">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="image-counter">
+                        <span id="imageCounter">1 / 24</span>
+                    </div>
+                    <button class="fullscreen-btn" id="fullscreenBtn">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+                
+                <div class="modal-info">
+                    <div class="photo-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span id="photoDate">15 октября 2024</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-user"></i>
+                            <span id="photoAuthor">Администрация города</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span id="photoViews">1,234 просмотра</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span id="photoCategory">Природа</span>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-description">
+                        <p id="photoDescription">Описание фотографии будет отображаться здесь...</p>
+                    </div>
+                    
+                    <div class="photo-actions">
+                        <button class="action-btn favorite-btn" id="favoriteBtn">
+                            <i class="fas fa-heart"></i>
+                            <span>В избранное</span>
+                        </button>
+                        <button class="action-btn share-btn" id="shareBtn">
+                            <i class="fas fa-share"></i>
+                            <span>Поделиться</span>
+                        </button>
+                        <button class="action-btn download-btn" id="downloadBtn">
+                            <i class="fas fa-download"></i>
+                            <span>Скачать</span>
+                        </button>
+                        <button class="action-btn zoom-btn" id="zoomBtn">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Увеличить</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content share-modal-content">
+            <div class="modal-header">
+                <h2>Поделиться фотографией</h2>
+                <button class="modal-close" id="closeShareModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="share-options">
+                    <button class="share-option" data-platform="facebook">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </button>
+                    <button class="share-option" data-platform="vk">
+                        <i class="fab fa-vk"></i>
+                        <span>ВКонтакте</span>
+                    </button>
+                    <button class="share-option" data-platform="telegram">
+                        <i class="fab fa-telegram"></i>
+                        <span>Telegram</span>
+                    </button>
+                    <button class="share-option" data-platform="whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </button>
+                    <button class="share-option" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </button>
+                    <button class="share-option" id="copyLink">
+                        <i class="fas fa-link"></i>
+                        <span>Копировать ссылку</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slideshow Mode -->
+    <div class="slideshow-overlay" id="slideshowOverlay" style="display: none;">
+        <div class="slideshow-container">
+            <img class="slideshow-image" id="slideshowImage" src="" alt="">
+            <div class="slideshow-info">
+                <h3 id="slideshowTitle">Заголовок</h3>
+                <p id="slideshowDescription">Описание</p>
+            </div>
+            <div class="slideshow-controls">
+                <button class="slideshow-btn" id="pauseSlideshow">
+                    <i class="fas fa-pause"></i>
+                </button>
+                <button class="slideshow-btn" id="stopSlideshow">
+                    <i class="fas fa-stop"></i>
+                </button>
+            </div>
+            <div class="slideshow-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Нальчик</h3>
+                    <p>Столица Кабардино-Балкарской Республики</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="attractions.html">Достопримечательности</a></li>
+                        <li><a href="accommodation.html">Жилье</a></li>
+                        <li><a href="cuisine.html">Кухня</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Телефон: +7 (866) 2XX-XX-XX</p>
+                    <p>Email: info@nalchik-tourism.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Туристический портал Нальчика. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="scroll-to-top.js"></script>
+    <script src="gallery-enhanced.js"></script>
+    <script src="modal-enhanced.js"></script>
+</body>
+</html>
